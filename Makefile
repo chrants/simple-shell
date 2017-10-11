@@ -35,14 +35,6 @@ turnin.tar: clean
 	tar cvf $(FILENAME) `find . -type f | grep -v \.tar$$ | grep -v \.tar\.gz$$ | grep -v /\.git | grep -v \.swp$$ | grep -v CVS | grep -v svn | grep -v \.pl$$ | grep -v mshref | grep -v ~$$`
 	gzip $(FILENAME)
 
-turnin: turnin.tar
-	@echo "Created $(FILENAME).gz for submission.  Please upload to Canvas."
-	@echo "Before uploading, please verify:"
-	@echo "		Your README is correctly filled out."
-	@echo "		Your pair programming log is in the project directory."
-	@echo "If either of those items are not done, please update your submission and run the make turnin command again."
-	@ls -al $(FILENAME).gz
-
 
 ##################
 # Regression tests

@@ -1,7 +1,6 @@
 /* 
  * msh - A mini shell program with job control
  * 
- * <Put your name and login ID here>
  */
 #include <stdio.h>
 #include <stdlib.h>
